@@ -1,11 +1,11 @@
-black_listed_sites = ['www.facebook.com', 'www.twitter.com', 'www.instagram.com']
+lista_negra = ['www.facebook.com', 'www.twitter.com', 'www.instagram.com']
 
 class Proxy:
     def __init__(self,url):
         self.url = url
 
     def conectarse(self):
-        if self.url in black_listed_sites:
+        if self.url in lista_negra:
             raise Exception("Acceso denegado")
         print("Conectado a",self.url)
 
